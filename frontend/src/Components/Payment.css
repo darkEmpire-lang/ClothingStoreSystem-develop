@@ -1,0 +1,594 @@
+.payment-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.payment-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.payment-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.payment-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.payment-method-section {
+  margin-bottom: 30px;
+}
+
+.payment-method-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.payment-method-btn {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-method-btn:hover {
+  border-color: #333;
+  background-color: #f9f9f9;
+}
+
+.payment-method-btn.active {
+  border-color: #333;
+  background-color: #333;
+  color: white;
+}
+
+.selected-payment-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 3px solid #333;
+}
+
+.selected-payment-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.slip-upload-section {
+  margin-bottom: 30px;
+}
+
+.payment-file-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.confirm-btn, .cancel-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.confirm-btn {
+  background-color: #333;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #000;
+}
+
+.cancel-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Card Popup Styles */
+.card-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.card-popup {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-popup h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-type-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card-type-btn {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-type-btn.active {
+  border-color: #333;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-logo {
+  height: 40px;
+  width: auto;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.form-select {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-select:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.card-popup-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.submit-btn, .close-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn {
+  background-color: #333;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #000;
+}
+
+.close-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* File Upload Styles */
+.file-upload-container {
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.file-upload-container:hover {
+  border-color: #333;
+  background-color: #f5f5f5;
+}
+
+.file-upload-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.file-size-info {
+  color: #777;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Loader for verification popup */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #333;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* SweetAlert customization */
+.swal2-popup {
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.swal2-title {
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.swal2-html-container {
+  color: #555;
+  font-size: 14px;
+}
+
+.swal2-confirm {
+  background-color: #333 !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.swal2-success {
+  border-color: #333 !important;
+}
+
+.swal2-success-ring {
+  border-color: #333 !important;
+}
+
+.swal2-success-line-tip, .swal2-success-line-long {
+  background-color: #333 !important;
+}
+
+/* Delivery Method Section */
+.delivery-method-section {
+  margin-bottom: 30px;
+}
+
+/* Error Text */
+.error-text {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Download and Clear Buttons */
+.download-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.download-btn:hover {
+  background-color: #000;
+}
+
+.clear-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clear-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Card Popup Actions with 4 buttons */
+.card-popup-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for the delivery popup */
+@media (max-width: 768px) {
+  .card-popup-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Address Input Container */
+.address-input-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 10px;
+}
+
+.address-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.address-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.location-selector-btn {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+.location-selector-btn:hover {
+  background-color: #000;
+}
+
+/* Home Delivery Popup */
+.home-delivery-popup {
+  max-width: 500px;
+}
+
+/* Location URL Input */
+.location-url-input {
+  margin-top: 10px;
+}
+
+/* Location Not Available Popup */
+.location-not-available-popup {
+  text-align: center;
+}
+
+.location-not-available-popup img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.location-not-available-popup p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Location URL Container */
+.location-url-container {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+}
+
+.location-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.location-url-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.location-url-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+/* Location Selector Button */
+.location-selector-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.location-selector-btn:hover {
+  background-color: #000;
+} 

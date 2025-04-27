@@ -1,0 +1,296 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.home-live-art {
+  min-height: 100vh;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height since navbar is removed */
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0; /* Remove left margin */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center all items horizontally */
+  text-align: center; /* Center text */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)); /* Lighter overlay */
+  z-index: 2;
+  padding-left: 0; /* Remove left padding */
+}
+
+.brand-logo-container {
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-out;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.brand-logo {
+  width: 200px; /* Increased size */
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-name {
+  color: white;
+  font-size: 4.5rem; /* Slightly larger */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.2s ease-out;
+  text-align: center; /* Ensure text is centered */
+  width: 100%; /* Full width to ensure centering */
+}
+
+.brand-slogan {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 600px; /* Limit width for elegance */
+  animation: fadeIn 1.4s ease-out;
+  text-align: center; /* Center the slogan */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.shop-now-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 30px; /* Smaller padding for a more rectangular shape */
+  font-size: 1rem; /* Smaller font size */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  animation: fadeIn 1.6s ease-out;
+  margin: 0 auto; /* Center the button */
+  display: block; /* Ensure it's a block element for margin auto to work */
+  width: fit-content; /* Width based on content */
+}
+
+.shop-now-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.shop-now-btn:hover {
+  color: black;
+}
+
+.shop-now-btn:hover::before {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    width: 90%;
+    margin-left: 0;
+  }
+  
+  .brand-logo {
+    width: 160px; /* Adjusted for tablets */
+  }
+  
+  .brand-name {
+    font-size: 3.5rem;
+  }
+  
+  .brand-slogan {
+    font-size: 1.4rem;
+  }
+  
+  .shop-now-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image-container {
+    width: 100%;
+  }
+  
+  .brand-logo {
+    width: 140px; /* Adjusted for mobile */
+  }
+  
+  .brand-name {
+    font-size: 2.8rem;
+  }
+  
+  .brand-slogan {
+    font-size: 1.2rem;
+  }
+  
+  .shop-now-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+.login-icon-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.login-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login-icon:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Much whiter background on hover */
+  transform: scale(1.1); /* Slightly larger scale */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Brighter glow */
+}
+
+.login-icon:hover svg {
+  color: #000; /* Change icon color to black when background is white */
+  transform: scale(1.1); /* Slightly larger icon */
+}
+
+@media (max-width: 768px) {
+  .login-icon-container {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .login-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .login-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-icon-container {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .login-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .login-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+} 
